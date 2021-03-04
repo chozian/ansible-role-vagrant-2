@@ -30,6 +30,7 @@
 - name: yum | Install Vagrant
   yum:
     name: "https://releases.hashicorp.com/vagrant/{{ vagrant_version_to_install }}/vagrant_{{ vagrant_version_to_install }}_x86_64.rpm"
+    disable_gpg_check: yes
     allow_downgrade: yes
     state: present
   when:
